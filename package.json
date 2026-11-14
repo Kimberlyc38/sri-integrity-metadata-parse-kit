@@ -1,0 +1,17 @@
+{
+  "name": "sri-integrity-metadata-parse-kit",
+  "version": "0.1.0",
+  "description": "Splits SRI attribute values into algorithm-hash pairs and checks hash lengths.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
