@@ -35,3 +35,10 @@ The trade-off is strictness: we only support the three algorithms defined in the
 ### `parseIntegrity(value: string): Array<{ algorithm: string, hash: string, options: string[] }>`
 
 Parses an integrity attribute value. Throws on invalid input.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
